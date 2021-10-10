@@ -48,7 +48,7 @@
         </div>
         <div class="container--right col">
           <h1>Booking</h1>
-          <h2>Type</h2>
+          <!-- <h2>Type</h2>
           <p>
             <span class="light"
               >Please select the type of booking that you want</span
@@ -63,16 +63,16 @@
               <input type="radio" id="specialRad" name="radio-group" />
               <label for="specialRad">Special Event</label>
             </p>
-          </div>
+          </div> -->
           <h2>Trip pickup and destination</h2>
-          <p class="daily">
+          <!-- <p class="daily">
             <span class="light">
               There are only two options, the bus will either pick you up from
               Durban and take you to Richards Bay, or pick you up from Richards
               Bay and take you to Durban. Please choose one of these options
             </span>
-          </p>
-          <div class="special hidden">
+          </p> -->
+          <div class="special">
             <p>
               <span class="light">
                 Please type in your pick-up destination, drop-off destination,
@@ -84,6 +84,7 @@
               <input
                 type="text"
                 id="pickUp"
+                name="pickUp"
                 required
                 placeholder="  e.g. Durban"
               />
@@ -93,6 +94,7 @@
               <input
                 type="text"
                 id="dropOff"
+                name="dropOff"
                 required
                 placeholder="  e.g. Cape Town"
               />
@@ -100,21 +102,34 @@
             <div class="dateTime row">
               <div class="input--date col">
                 <label for="date"><p>Date</p></label>
-                <input type="date" id="date" required />
+                <input type="date" id="date" name="date" required />
               </div>
               <div class="input--time col">
                 <label for="time"><p>Time</p></label>
-                <input type="time" id="time" required />
+                <input type="time" id="time" name="time" required />
               </div>
             </div>
           </div>
           <div class="btn col">
-            <a href="#" class="btn--dtr daily"
+            <!-- <a href="#" class="btn--dtr daily"
               ><div class="dtr">Durban to Richards Bay</div></a
-            >
-            <a href="#" class="btn--rtd daily"
+            > -->
+            <!-- <input
+              type="button"
+              class="btn--dtr daily dtr btn"
+              value="Durban to Richards Bay"
+              name="dtr"
+            /> -->
+            <!-- <a href="#" class="btn--rtd daily"
               ><div class="rtd">Richards Bay to Durban</div></a
-            >
+            > -->
+
+            <!-- <input
+              type="button"
+              class="btn--rtd daily rtd btn"
+              value="Richards Bay to Durban"
+              name="rtd"
+            /> -->
 
             <input
               type="submit"
@@ -127,7 +142,7 @@
       </div>
     </form>
 
-    <script src="tripType.js"></script>
+    <!-- <script src="tripType.js"></script> -->
     <script src="scriptIndex.js"></script>
   </body>
 </html>

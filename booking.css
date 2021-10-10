@@ -181,7 +181,7 @@ input {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2rem;
-
+  margin-bottom: 2rem;
   align-items: center;
 }
 
@@ -202,7 +202,7 @@ input[type="submit"] {
   background-color: var(--clr-primary-black);
 
   /* max-width: 265.5px; */
-  max-width: 300px;
+  max-width: 400px;
   margin: 0.2em 0;
 }
 
