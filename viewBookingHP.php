@@ -41,9 +41,6 @@ session_start();
             <li class="nav__item">
               <a href="#" class="nav__link">Contact</a>
             </li>
-            <li class="nav__item">
-              <a href="index.html" class="nav__link">Logout</a>
-            </li>
           </ul>
         </nav>
       </div>
@@ -71,7 +68,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT firstName,pickUp, dropOff, `date`, `time`,paid FROM mbstbl WHERE emailAddress = '$current' ";
+$sql = "SELECT firstName,pickUp, dropOff, `date`, `time` FROM mbstbl WHERE emailAddress = '$current' ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -82,8 +79,7 @@ if ($result->num_rows > 0) {
     <p>Pick-up destination: <span id="pickUp">'.$row["pickUp"].'</span></p>
     <p>Drop-off destination: <span id="dropOff">'.$row["dropOff"].'</span></p>
     <p>Date: <span id="date">'.$row["date"].'</span></p>
-    <p>Time: <span id="time">'.$row["time"].'</span></p>
-    <p>Amount paid: <span id="paid">'.$row["paid"].'</span></p>';
+    <p>Time: <span id="time">'.$row["time"].'</span></p>';
     
   }
 } else {
@@ -94,32 +90,27 @@ $conn->close();
 ?>
         
           <div class="btn_section col">
-            <form action="payment.php" method = "POST">
+            
               <input type="text" value="yes" name ="payment" class="hidden" />
               <input
                 type="submit"
-                value="Pay R50"
+                value="PAID-R50"
                 id="payment"
                 
                 class="btn btn--submit submit"
               />
-            </form>
-            <form action="cancellation.php" method = "POST">
-              <input
-                type="submit"
-                value="Cancel"
-                name="cancel"
-                class="btn btn--submit submit"
-              />
-                        </div>
-            </form>
+            
+            <input
+              type="submit"
+              value="Cancel"
+              name="cancel"
+              class="btn btn--submit submit"
+            />
+          </div>
         
       </div>
     </div>
-    <script src = "payment.js">
-     
-
-    </script>
+    
     <script src="scriptIndex.js"></script>
   </body>
 </html>

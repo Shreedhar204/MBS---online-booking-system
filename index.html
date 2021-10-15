@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,19 +61,15 @@
           />
         </div>
         <div class="btn col">
-          <a href="#" class="btn--submit"><div class="submit">SUBMIT</div></a>
-          <a href="#" class="btn--reg"><div class="reg">REGISTER</div></a>
-          <input type = "submit" value = "login" class = "submit btn--submit">
+          <input type = "submit" value = "LOGIN" class = "submit btn--submit btn">
+         
+          <a href="register.html" class="btn--reg"><div class="reg">REGISTER</div></a>
+          
         </div>
 
         
     </form>
-      <p>
-        <span class="red">
-          *Please check if you entered your details correctly. If you have not
-          registered, please click the register button and create your account
-        </span>
-      </p>
+      
     </div>
 
     <div class="img-wrapper">

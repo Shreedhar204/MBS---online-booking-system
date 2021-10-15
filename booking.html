@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,90 +47,88 @@
         </nav>
       </div>
     </header>
-
-    <div class="main bkg-container">
-      <div class="booking-img">
-        <img src="icons/undraw_Travel_booking_re_6umu.png" />
-      </div>
-      <div class="container--right col">
-        <h1>Booking</h1>
-        <h2>Type</h2>
-        <p>
-          <span class="light"
-            >Please select the type of booking that you want</span
-          >
-        </p>
-        <div class="radio-sec">
-          <p>
-            <input type="radio" id="dailyRad" name="radio-group" checked />
-            <label for="dailyRad">Daily trip</label>
-          </p>
-          <p>
-            <input type="radio" id="specialRad" name="radio-group" />
-            <label for="specialRad">Special Event</label>
-          </p>
+    <form action="booking.php" method="post">
+      <div class="main bkg-container">
+        <div class="booking-img">
+          <img src="icons/undraw_Travel_booking_re_6umu.png" />
         </div>
-        <h2>Trip pickup and destination</h2>
-        <p class="daily">
-          <span class="light">
-            There are only two options, the bus will either pick you up from
-            Durban and take you to Richards Bay, or pick you up from Richards
-            Bay and take you to Durban. Please choose one of these options
-          </span>
-        </p>
-        <div class="special hidden">
+        <div class="container--right col">
+          <h1>Booking</h1>
+          <!-- <h2>Type</h2>
           <p>
+            <span class="light"
+              >Please select the type of booking that you want</span
+            >
+          </p>
+          <div class="radio-sec">
+            <p>
+              <input type="radio" id="dailyRad" name="radio-group" checked />
+              <label for="dailyRad">Daily trip</label>
+            </p>
+            <p>
+              <input type="radio" id="specialRad" name="radio-group" />
+              <label for="specialRad">Special Event</label>
+            </p>
+          </div> -->
+          <h2>Trip pickup and destination</h2>
+          <!-- <p class="daily">
             <span class="light">
-              Please type in your pick-up destination, drop-off destination, the
-              date and time of your trip.
+              There are only two options, the bus will either pick you up from
+              Durban and take you to Richards Bay, or pick you up from Richards
+              Bay and take you to Durban. Please choose one of these options
             </span>
-          </p>
-          <div class="input--pickUp col">
-            <label for="pickUp"><p>Pick-up</p></label>
-            <input
-              type="text"
-              id="pickUp"
-              required
-              placeholder="  e.g. Durban"
-            />
+          </p> -->
+          <div class="special">
+            <p>
+              <span class="light">
+                Please type in your pick-up destination, drop-off destination,
+                the date and time of your trip.
+              </span>
+            </p>
+            <div class="input--pickUp col">
+              <label for="pickUp"><p>Pick-up</p></label>
+              <input
+                type="text"
+                id="pickUp"
+                name="pickUp"
+                required
+                placeholder="  e.g. Durban"
+              />
+            </div>
+            <div class="input--dropOff col">
+              <label for="dropOff"><p>Drop-off</p></label>
+              <input
+                type="text"
+                id="dropOff"
+                name="dropOff"
+                required
+                placeholder="  e.g. Cape Town"
+              />
+            </div>
+            <div class="dateTime row">
+              <div class="input--date col">
+                <label for="date"><p>Date</p></label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="input--time col">
+                <label for="time"><p>Time</p></label>
+                <input type="time" id="time" name="time" required />
+              </div>
+            </div>
           </div>
-<<<<<<< Updated upstream
-          <div class="input--dropOff col">
-            <label for="dropOff"><p>Drop-off</p></label>
-=======
           <div class="btn col">
->>>>>>> Stashed changes
             <input
-              type="text"
-              id="dropOff"
-              required
-              placeholder="  e.g. Cape Town"
+              type="submit"
+              value="SUBMIT"
+              class="submit btn--submit btn"
+              id="bookingSubmit"
             />
           </div>
-          <div class="dateTime row">
-            <div class="input--date col">
-              <label for="date"><p>Date</p></label>
-              <input type="date" id="date" required />
-            </div>
-            <div class="input--time col">
-              <label for="time"><p>Time</p></label>
-              <input type="time" id="time" required />
-            </div>
-          </div>
-        </div>
-        <div class="btn col">
-          <a href="#" class="btn--dtr daily"
-            ><div class="dtr">Durban to Richards Bay</div></a
-          >
-          <a href="#" class="btn--rtd daily"
-            ><div class="rtd">Richards Bay to Durban</div></a
-          >
-          <a href="#" class="btn--submit"><div class="submit">SUBMIT</div></a>
         </div>
       </div>
-    </div>
+    </form>
 
-    <script src="tripType.js"></script>
+    <!-- <script src="tripType.js"></script> -->
     <script src="scriptIndex.js"></script>
   </body>
 </html>

@@ -3,6 +3,8 @@ const dailyBtn = document.querySelector("#dailyRad");
 const specialBtn = document.querySelector("#specialRad");
 const special = document.querySelector(".special");
 const daily = document.querySelectorAll(".daily");
+const dtr = document.querySelector(".btn--dtr");
+const rtd = document.querySelector(".btn--rtd");
 
 // Special and daily trip selection
 specialBtn.addEventListener("click", function () {
@@ -21,3 +23,7 @@ dailyBtn.addEventListener("click", function () {
     daily[i].classList.remove("hidden");
   }
 });
+
+// dtr.addEventListener("click", function () {
+//   dtr.classList.toggle("isSelected");
+// }); use if second idea does not work
