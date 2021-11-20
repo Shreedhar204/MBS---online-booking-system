@@ -29,7 +29,7 @@
           <ul class="nav__list nav__list--primary">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item">
-              <a href="#" class="nav__link">About</a>
+              <a href="aboutUs.html" class="nav__link">About</a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link">Contact</a>
@@ -75,6 +75,7 @@
               Please type in your pick-up destination, drop-off destination, the
               date and time of your trip.
             </span>
+<<<<<<< Updated upstream
           </p>
           <div class="input--pickUp col">
             <label for="pickUp"><p>Pick-up</p></label>
@@ -84,6 +85,54 @@
               required
               placeholder="  e.g. Durban"
             />
+=======
+          </p> -->
+          <div class="special">
+            <p>
+              <span class="light">
+                Please type in your pick-up destination, drop-off destination,
+                the date and time of your trip.
+              </span>
+            </p>
+            <div class="input--pickUp col">
+              <label for="pickUp"><p>Pick-up</p></label>
+              <input
+                type="text"
+                id="pickUp"
+                name="pickUp"
+                required
+                placeholder="  e.g. Durban"
+              />
+            </div>
+            <div class="input--dropOff col">
+              <label for="dropOff"><p>Drop-off</p></label>
+              <input
+                type="text"
+                id="dropOff"
+                name="dropOff"
+                required
+                placeholder="  e.g. Cape Town"
+              />
+            </div>
+            <div class="dateTime row">
+              <div class="input--date col">
+                <label for="date"><p>Date</p></label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="input--time col">
+                <label for="time"><p>Time</p></label>
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  min="08:00"
+                  max="12:00"
+                  step="7200"
+                  required
+                />
+              </div>
+            </div>
+>>>>>>> Stashed changes
           </div>
           <div class="input--dropOff col">
             <label for="dropOff"><p>Drop-off</p></label>
