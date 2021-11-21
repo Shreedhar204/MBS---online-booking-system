@@ -39,7 +39,7 @@ session_start();
               <a href="aboutUs.html" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact</a>
+              <a href="contact.html" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>

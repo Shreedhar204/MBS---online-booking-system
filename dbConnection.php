@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     values(?, ?, ?, ?)");
     $stmt->bind_param("ssss",$firstName, $surname, $emailAddress, $password);
     $stmt->execute();
-    echo"registration successful";
+    header("Location: http://localhost/mbs%20website/index.html");
     $stmt->close();
     $conn->close();
 }

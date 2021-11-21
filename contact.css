@@ -131,7 +131,6 @@ ul {
   height: auto;
   position: relative;
 }
-
 .hidden {
   display: none;
 }
@@ -139,6 +138,10 @@ ul {
 h1 {
   font-size: 44px;
   font-weight: 800;
+}
+
+section h1 {
+  text-align: center;
 }
 p {
   font-size: 17px;
@@ -150,130 +153,52 @@ h2 {
   margin: 0;
 }
 
-/* .container {
-  width: 75%;
-  max-width: 346.5px;
-  margin: 0 auto;
-  margin-top: 3em;
-  position: relative;
-} */
-
 .col {
   display: flex;
   flex-direction: column;
 }
 
-input {
-  border: 1.5px solid black;
-  border-radius: 7px;
-  font-size: 17px;
+.img--wrapper {
+  width: 100%;
+  max-width: 500px;
 }
 
-.input--pickUp,
-.input--dropOff {
-  width: 70%;
+.top_content,
+.bottom_content {
   margin: 0 auto;
+
+  width: 84%;
+  max-width: 395.5px;
+  text-align: center;
 }
 
-.btn {
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.bottom_content--right {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.btn--submit,
-.btn--dtr,
-.btn--rtd {
-  text-decoration: none;
-
-  color: var(--clr-neutral-lightBrown);
+.icons,
+.icon_wrapper {
+  padding: 0;
+  margin: 0;
 }
 
-.submit,
-.dtr,
-.rtd,
-input[type="submit"] {
-  padding: 0.4em 2em;
-  border-radius: 7px;
-  background-color: var(--clr-primary-black);
-
-  /* max-width: 265.5px; */
-  max-width: 400px;
-  margin: 0.2em 0;
+.icons p {
+  padding: 0;
+  margin: 0;
 }
 
-.submit:focus,
-.submit:hover,
-.dtr:focus,
-.dtr:hover,
-.rtd:focus,
-.rtd:hover {
-  color: #010101;
-  background-color: white;
-  border: 2px solid black;
+.icons {
+  align-items: center;
+  margin-bottom: 1em;
 }
 
-/* .isSelected {
-  color: #010101;
-  background-color: white;
-} this might come in to play if the second idea does not work */
-
-.dateTime {
-  flex-direction: column;
-  width: 56%;
-  max-width: 157.3px;
-  margin: 0 auto;
+.icon_wrapper {
+  width: 35px;
+  margin-right: 1rem;
 }
-#time {
-  width: 100%;
-}
-
-.img-wrapper {
-  position: absolute;
-  top: 20%;
-  left: 43%;
-  /* width: 650px;*/
-
-  z-index: -100;
-}
-
-.red {
-  color: #ef0202;
-}
-
-.light {
-  color: grey;
-  font-weight: 400;
-}
-
-.bkg-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.container--right {
-  margin: 0 auto 0;
-  text-align: center;
-  width: 90%;
-}
-
 @media (min-width: 700px) {
-  .bkg-container {
-    width: 90%;
-
-    margin-top: 3em;
-    position: relative;
-    justify-content: space-between;
-  }
-  .container--right {
-    max-width: 428.73px;
-    text-align: left;
-  }
-
   .nav-toggle {
     display: none;
   }
@@ -296,33 +221,21 @@ input[type="submit"] {
 
     margin-left: 1em;
   }
-
-  input {
-    border: 1.5px solid black;
-    border-radius: 7px;
-    font-size: 17px;
-    width: 95%;
-  }
-
-  .input--pickUp,
-  .input--dropOff {
-    width: 100%;
-  }
-
-  .bkg-container {
+  .top_content,
+  .bottom_content {
     display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+
+    width: 90%;
+    max-width: 837.89px;
+    text-align: left;
   }
 
-  .dateTime {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 322.84px;
+  .bottom_content {
+    flex-direction: row-reverse;
+  }
+  .bottom_content--right {
+    justify-content: center;
+    align-items: flex-start;
   }
 }
-
-/* destination button styles must be changed when clicked on 
-The second idea is to just delete the submit button, once either option
-is selected, a modal window with the summary of the customers trip pops up. first idea too 
-hard */

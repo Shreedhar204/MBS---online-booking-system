@@ -1,6 +1,9 @@
 <?php
+
+session_start();
     $emailAddress = $_POST["emailAddress"];
     $password = $_POST["password"];
+    
 
    
 
@@ -17,11 +20,14 @@ if ($con ->connect_error) {
         $data = $stmt_result->fetch_assoc();
         if($data['password'] === $password){
             echo"Login succussfully";
+            $_SESSION['username'] = $emailAddress;
+            header("Location: http://localhost/mbs%20website/booking.html");
+            exit();
         }else{
-            echo"Invalid email or password";
+            echo"Invalid email or password. Please go back and try again.";
         }
     }else{
-        echo "Invalid email or password";
+        echo "Invalid email or password. Please go back and try again.";
     }
 }
 

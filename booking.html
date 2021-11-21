@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,65 +30,53 @@
         <div class="logo"><img src="icons/logo2.png" alt="" /></div>
         <nav class="nav hidden">
           <ul class="nav__list nav__list--primary">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <a
+                href="http://localhost/mbs%20website/viewBookingH.php"
+                class="nav__link"
+                >View Booking</a
+              >
+            </li>
             <li class="nav__item">
               <a href="aboutUs.html" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact</a>
+              <a href="contact.html" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <div class="main bkg-container">
-      <div class="booking-img">
-        <img src="icons/undraw_Travel_booking_re_6umu.png" />
-      </div>
-      <div class="container--right col">
-        <h1>Booking</h1>
-        <h2>Type</h2>
-        <p>
-          <span class="light"
-            >Please select the type of booking that you want</span
-          >
-        </p>
-        <div class="radio-sec">
-          <p>
-            <input type="radio" id="dailyRad" name="radio-group" checked />
-            <label for="dailyRad">Daily trip</label>
-          </p>
-          <p>
-            <input type="radio" id="specialRad" name="radio-group" />
-            <label for="specialRad">Special Event</label>
-          </p>
+    <form action="booking.php" method="post">
+      <div class="main bkg-container">
+        <div class="booking-img">
+          <img src="icons/undraw_Travel_booking_re_6umu.png" />
         </div>
-        <h2>Trip pickup and destination</h2>
-        <p class="daily">
-          <span class="light">
-            There are only two options, the bus will either pick you up from
-            Durban and take you to Richards Bay, or pick you up from Richards
-            Bay and take you to Durban. Please choose one of these options
-          </span>
-        </p>
-        <div class="special hidden">
+        <div class="container--right col">
+          <h1>Booking</h1>
+          <!-- <h2>Type</h2>
           <p>
-            <span class="light">
-              Please type in your pick-up destination, drop-off destination, the
-              date and time of your trip.
-            </span>
-<<<<<<< Updated upstream
+            <span class="light"
+              >Please select the type of booking that you want</span
+            >
           </p>
-          <div class="input--pickUp col">
-            <label for="pickUp"><p>Pick-up</p></label>
-            <input
-              type="text"
-              id="pickUp"
-              required
-              placeholder="  e.g. Durban"
-            />
-=======
+          <div class="radio-sec">
+            <p>
+              <input type="radio" id="dailyRad" name="radio-group" checked />
+              <label for="dailyRad">Daily trip</label>
+            </p>
+            <p>
+              <input type="radio" id="specialRad" name="radio-group" />
+              <label for="specialRad">Special Event</label>
+            </p>
+          </div> -->
+          <h2>Trip pickup and destination</h2>
+          <!-- <p class="daily">
+            <span class="light">
+              There are only two options, the bus will either pick you up from
+              Durban and take you to Richards Bay, or pick you up from Richards
+              Bay and take you to Durban. Please choose one of these options
+            </span>
           </p> -->
           <div class="special">
             <p>
@@ -132,41 +123,20 @@
                 />
               </div>
             </div>
->>>>>>> Stashed changes
           </div>
-          <div class="input--dropOff col">
-            <label for="dropOff"><p>Drop-off</p></label>
+          <div class="btn col">
             <input
-              type="text"
-              id="dropOff"
-              required
-              placeholder="  e.g. Cape Town"
+              type="submit"
+              value="SUBMIT"
+              class="submit btn--submit btn"
+              id="bookingSubmit"
             />
           </div>
-          <div class="dateTime row">
-            <div class="input--date col">
-              <label for="date"><p>Date</p></label>
-              <input type="date" id="date" required />
-            </div>
-            <div class="input--time col">
-              <label for="time"><p>Time</p></label>
-              <input type="time" id="time" required />
-            </div>
-          </div>
-        </div>
-        <div class="btn col">
-          <a href="#" class="btn--dtr daily"
-            ><div class="dtr">Durban to Richards Bay</div></a
-          >
-          <a href="#" class="btn--rtd daily"
-            ><div class="rtd">Richards Bay to Durban</div></a
-          >
-          <a href="#" class="btn--submit"><div class="submit">SUBMIT</div></a>
         </div>
       </div>
-    </div>
+    </form>
 
-    <script src="tripType.js"></script>
+    <!-- <script src="tripType.js"></script> -->
     <script src="scriptIndex.js"></script>
   </body>
 </html>
